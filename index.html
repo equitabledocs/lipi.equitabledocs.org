@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lipi: the language-readiness foundation for non-English content</title>
+<style>
+:root{--ink:#0b0c0c;--mute:#4b5563;--bg:#ffffff;--alt:#f3f4f6;--accent:#1e40af;
+--accent-hover:#172554;--border:#d1d5db;--rule:#e5e7eb;--focus-bg:#fde68a;--focus-ink:#78350f}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;color:var(--ink);background:var(--bg);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+line-height:1.6}
+a{color:var(--accent)}a:hover{color:var(--accent-hover)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus-ink);outline-offset:2px;
+background:var(--focus-bg);color:var(--focus-ink)}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--focus-bg);
+color:var(--focus-ink);padding:8px;z-index:10}
+header.site{background:#1f2937;color:#fff;padding:14px 0}
+header.site a{color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem}
+header.site .site-byline{color:#e5e7eb;font-size:0.9rem;margin-left:12px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+nav.toc-side{position:sticky;top:16px;font-size:0.9rem}
+nav.toc-side .nav-label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;
+color:var(--mute);margin:18px 0 6px;font-weight:700}
+nav.toc-side ul{list-style:none;margin:0;padding:0}
+nav.toc-side li{margin:5px 0}
+nav.toc-side a{text-decoration:none}
+nav.toc-side a.here{font-weight:700;color:var(--ink)}
+main{min-width:0;max-width:46rem}
+main h1{font-size:2.1rem;line-height:1.2;margin:0 0 4px}
+.byline{color:var(--mute);font-size:1.2rem;font-weight:400;margin:0 0 22px}
+main h2{font-size:1.5rem;margin:34px 0 4px;padding-top:14px;border-top:2px solid var(--ink)}
+main h3{font-size:1.15rem;margin:24px 0 4px}
+main p,main li{font-size:1rem}
+main ul,main ol{padding-left:1.3rem}
+main code{background:var(--alt);padding:1px 5px;border-radius:4px;font-size:0.92em}
+main table{border-collapse:collapse;width:100%;margin:14px 0;font-size:0.92rem}
+main th,main td{border:1px solid var(--border);padding:7px 10px;text-align:left;vertical-align:top}
+main th{background:var(--alt)}
+.lede{color:var(--mute);font-size:1.1rem}
+.page-toc{background:var(--alt);border:1px solid var(--border);border-radius:6px;
+padding:12px 16px;margin:16px 0 26px;font-size:0.9rem}
+.page-toc .lab{font-weight:700;font-size:0.78rem;text-transform:uppercase;
+letter-spacing:0.06em;color:var(--mute)}
+.page-toc ul{margin:6px 0 0}
+.footnote{font-size:0.9rem;color:var(--mute)}
+.footnote p{font-size:0.9rem}
+footer{border-top:1px solid var(--rule);margin-top:48px;padding:22px 0;
+color:var(--mute);font-size:0.9rem}
+footer a{color:var(--accent)}
+@media (max-width:820px){.layout{grid-template-columns:1fr}
+nav.toc-side{position:static;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:10px}}
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><a href="index.html">Lipi</a><span class="site-byline">the language-readiness foundation for non-English content</span></div></header>
+<div class="wrap"><div class="layout"><nav class="toc-side" aria-label="Lipi pages"><p class="nav-label">Start here</p><ul><li><a class="here" href="index.html">Home</a></li><li><a href="the-gap.html">The gap</a></li><li><a href="legacy-fonts.html">Legacy fonts</a></li><li><a href="four-conditions.html">The four conditions</a></li><li><a href="remediating.html">Remediating a book</a></li></ul></nav><main id="main"><h1 id="lipi">Lipi</h1>
+<p class="byline">the language-readiness foundation for non-English content</p>
+<!-- Visual motif: a quiet chorus of the world's words for language and script around or beneath the name. Verify each with a native speaker before publishing.
+Bhasha · Akshara · Zaban · Mozhi · Bahasa · Aksara · Phasa · Lugha · Khatt · Maandishi · Fidel · Quanqua · Ede · Harshe · Ulimi · Wen · Hangul · Simi · Ne'e -->
+
+<p>A document can look like perfect Hindi, Tamil, Kannada, or Urdu and be completely unreadable to a screen reader. The page is right; the text underneath is not. Lipi is about that gap, and about closing it.</p>
+<h2 id="the-problem-briefly">The problem, briefly</h2>
+<p>Most of the world's languages are written in scripts the document-accessibility world was not built for. A large share of regional-language books, exam papers, and government documents store their text in legacy fonts that only paint the local script while saving the bytes as Roman letters, or as scans with no real text at all. To anyone who can see the page, it looks finished. To a screen reader, a search box, or a translation tool, the text is gibberish or silence. The reader it shuts out is the one person who was not in the room when the file was made.</p>
+<p>This is not a small font problem. Everything else in accessibility, the tags, the headings, the descriptions, the reading order, assumes the text underneath is real. For most non-English documents that assumption is missing. Language readiness is the foundation the rest stands on, and it is what Lipi exists to check and to teach.</p>
+<h2 id="what-lipi-is">What Lipi is</h2>
+<p>Two things, working together.</p>
+<ul>
+<li><strong>Learn.</strong> A knowledge base, in plain language and carefully sourced, on what goes wrong with documents in languages other than English, how to tell, and how to fix it. Written for the people who remediate these documents and for the governments and institutions that set the policies which produce them.</li>
+<li><strong>Check.</strong> A tool that reads a document and tells you whether its text is real, machine-readable text in the language it appears to be, or a legacy substitute that needs to be re-encoded before any accessibility work can help. It names the problem in plain words and points to the fix.</li>
+</ul>
+<h2 id="who-it-is-for">Who it is for</h2>
+<ul>
+<li><strong>Disability practitioners and remediators:</strong> a clear path from "this looks fine but reads as nothing" to a document a screen reader can actually read.</li>
+<li><strong>Special educators of students who are blind or have low vision:</strong> how to tell, before you hand a textbook to a student, whether their screen reader will be able to read it, and what to ask for when it cannot.</li>
+<li><strong>State education departments, publishers, and libraries:</strong> why regional-language documents fail, what to require when commissioning and publishing them, and how to verify it at scale. Equity in education and public information depends on getting this right at the source.</li>
+<li><strong>Disability-rights advocates:</strong> the evidence and the legal grounding to make the case and hold institutions to it.</li>
+<li><strong>Researchers and assistive-technology developers</strong> who have had little reference material centred on these scripts.</li>
+</ul>
+<h2 id="where-to-start">Where to start</h2>
+<ul>
+<li>New to this? Read <a href="the-gap.html">the gap</a>, why documents in most languages are left out, and <a href="four-conditions.html">the four conditions</a> a non-English document must meet to be readable.</li>
+<li>Remediating a document? Go to <a href="legacy-fonts.html">when the text is not really text</a> to understand legacy fonts, then <a href="remediating.html">remediating a regional-language book</a> for the workflow.</li>
+<li>Teaching a student who uses a screen reader? Start with <a href="four-conditions.html">the four conditions</a>, the fastest way to tell whether a textbook will work; guidance for educators is landing soon.</li>
+<li>Setting policy or making the case? Start with <a href="the-gap.html">the gap</a>; the procurement guidance and the legal grounding (the RPwD Act, the CRPD, the Marrakesh Treaty) are landing soon.</li>
+<li>Have a document to check? The Lipi check is coming soon.</li>
+</ul>
+<h2 id="why-we-built-it">Why we built it</h2>
+<p>Because a student who is blind should be able to read her own textbook in her own language, and today, far too often, she cannot, through no failing of her own and unseen by everyone who could have caught it. The knowledge to fix this exists, scattered across font forums and academic papers and the memories of people who have solved it one document at a time. Lipi gathers it, names the problem plainly, and puts the means to fix it in reach. We start with the scripts of South Asia because that is where we can be most useful first, and we build toward every language that has been left waiting.</p></main></div></div>
+<footer><div class="wrap"><strong>Lipi</strong>, the language-readiness foundation for non-English content. Part of the EquitableDocs initiative. See also the <a href="https://equitabledocs.org/guide/">Document Accessibility Guide</a>. Questions: <a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a>.</div></footer>
+</body></html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The gap | Lipi</title>
+<style>
+:root{--ink:#0b0c0c;--mute:#4b5563;--bg:#ffffff;--alt:#f3f4f6;--accent:#1e40af;
+--accent-hover:#172554;--border:#d1d5db;--rule:#e5e7eb;--focus-bg:#fde68a;--focus-ink:#78350f}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;color:var(--ink);background:var(--bg);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+line-height:1.6}
+a{color:var(--accent)}a:hover{color:var(--accent-hover)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus-ink);outline-offset:2px;
+background:var(--focus-bg);color:var(--focus-ink)}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--focus-bg);
+color:var(--focus-ink);padding:8px;z-index:10}
+header.site{background:#1f2937;color:#fff;padding:14px 0}
+header.site a{color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem}
+header.site .site-byline{color:#e5e7eb;font-size:0.9rem;margin-left:12px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+nav.toc-side{position:sticky;top:16px;font-size:0.9rem}
+nav.toc-side .nav-label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;
+color:var(--mute);margin:18px 0 6px;font-weight:700}
+nav.toc-side ul{list-style:none;margin:0;padding:0}
+nav.toc-side li{margin:5px 0}
+nav.toc-side a{text-decoration:none}
+nav.toc-side a.here{font-weight:700;color:var(--ink)}
+main{min-width:0;max-width:46rem}
+main h1{font-size:2.1rem;line-height:1.2;margin:0 0 4px}
+.byline{color:var(--mute);font-size:1.2rem;font-weight:400;margin:0 0 22px}
+main h2{font-size:1.5rem;margin:34px 0 4px;padding-top:14px;border-top:2px solid var(--ink)}
+main h3{font-size:1.15rem;margin:24px 0 4px}
+main p,main li{font-size:1rem}
+main ul,main ol{padding-left:1.3rem}
+main code{background:var(--alt);padding:1px 5px;border-radius:4px;font-size:0.92em}
+main table{border-collapse:collapse;width:100%;margin:14px 0;font-size:0.92rem}
+main th,main td{border:1px solid var(--border);padding:7px 10px;text-align:left;vertical-align:top}
+main th{background:var(--alt)}
+.lede{color:var(--mute);font-size:1.1rem}
+.page-toc{background:var(--alt);border:1px solid var(--border);border-radius:6px;
+padding:12px 16px;margin:16px 0 26px;font-size:0.9rem}
+.page-toc .lab{font-weight:700;font-size:0.78rem;text-transform:uppercase;
+letter-spacing:0.06em;color:var(--mute)}
+.page-toc ul{margin:6px 0 0}
+.footnote{font-size:0.9rem;color:var(--mute)}
+.footnote p{font-size:0.9rem}
+footer{border-top:1px solid var(--rule);margin-top:48px;padding:22px 0;
+color:var(--mute);font-size:0.9rem}
+footer a{color:var(--accent)}
+@media (max-width:820px){.layout{grid-template-columns:1fr}
+nav.toc-side{position:static;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:10px}}
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><a href="index.html">Lipi</a><span class="site-byline">the language-readiness foundation for non-English content</span></div></header>
+<div class="wrap"><div class="layout"><nav class="toc-side" aria-label="Lipi pages"><p class="nav-label">Start here</p><ul><li><a href="index.html">Home</a></li><li><a class="here" href="the-gap.html">The gap</a></li><li><a href="legacy-fonts.html">Legacy fonts</a></li><li><a href="four-conditions.html">The four conditions</a></li><li><a href="remediating.html">Remediating a book</a></li></ul></nav><main id="main"><h1 id="the-gap-why-documents-in-most-of-the-worlds-languages-are-left-out-of-accessibility">The gap: why documents in most of the world's languages are left out of accessibility</h1><div class="page-toc"><span class="lab">On this page</span><div class="toc">
+<ul>
+<li><a href="#the-gap-why-documents-in-most-of-the-worlds-languages-are-left-out-of-accessibility">The gap: why documents in most of the world's languages are left out of accessibility</a><ul>
+<li><a href="#what-the-gap-actually-is">What "the gap" actually is</a></li>
+<li><a href="#why-it-stays-invisible">Why it stays invisible</a></li>
+<li><a href="#who-this-leaves-out-and-at-what-cost">Who this leaves out, and at what cost</a></li>
+<li><a href="#why-we-treat-this-as-the-foundation-not-a-footnote">Why we treat this as the foundation, not a footnote</a></li>
+<li><a href="#endnotes">Endnotes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>Most of what has been written about making documents accessible, the standards, the checking tools, the training, the certifications, was built in English, for English and the languages written in the Latin alphabet. That work is good, and much of it carries over. But it rests on an assumption so basic that it is almost never stated: that the text in a document is real, machine-readable text. For English that assumption holds by default. For a very large share of the documents produced in the Global South, it does not, and because the assumption is never stated, its failure is never checked.</p>
+<h2 id="what-the-gap-actually-is">What "the gap" actually is</h2>
+<p>There are two halves to it.</p>
+<p>The first is a knowledge gap. Search for guidance on accessible PDFs and you will find detailed material on tagging, headings, alternative text, reading order, and colour contrast, almost all of it assuming Latin-script English. Search for guidance on what to do when a Hindi, Tamil, or Bengali document's text comes out as gibberish, and you will find scattered font-conversion forums, a few academic papers, and almost nothing that joins the problem to accessibility and addresses a practitioner or a policymaker.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> The expertise exists in fragments; it has not been gathered.</p>
+<p>The second is a foundation gap in the documents themselves. A large part of regional-language publishing was produced, and continues to be produced, with legacy fonts that store text as Roman bytes and only paint it as the local script, or as scans with no real text layer at all.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup> Either way the text is not machine-readable. So the work of accessibility, all the careful tagging and structuring, has nothing underneath it to stand on. You can do everything right above the text layer and the document still reads as nothing, or as nonsense, to a screen reader.</p>
+<h2 id="why-it-stays-invisible">Why it stays invisible</h2>
+<p>A document with this problem looks completely finished. The page renders perfectly to anyone who can see it, because the viewer paints the shapes and never consults the underlying text.<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> The accessibility checkers do not catch it either: the PDF/UA standard and its reference validator require only that a font carry a character map, not that the map be correct, so a document whose text decodes to gibberish can still earn a clean report.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> The result is that the failure is discovered only by the person it excludes, the screen reader user, who was not present when the file was made or signed off. Nothing in the ordinary workflow surfaces it.</p>
+<p>So the exclusion is not the result of anyone deciding these readers do not matter. It is the result of a blind spot that is structural: the tools and habits were built where the foundation was already sound, and they look at every floor except the one they are standing on.</p>
+<h2 id="who-this-leaves-out-and-at-what-cost">Who this leaves out, and at what cost</h2>
+<p>The people on the other side of this gap are students who are blind or have low vision and use screen readers; people with print disabilities who rely on text-to-speech; and anyone who needs to search, copy, translate, or reflow a document. In the Global South they are reading, or trying to read, in languages spoken by hundreds of millions: Hindi, Bengali, Tamil, Telugu, Marathi, Urdu, Kannada, Gujarati, Malayalam, Punjabi, Odia, and many more. The documents in question are not marginal: they are school and university textbooks, examination papers, government circulars, legal and health information. A textbook that is inaccessible in this way is not a degraded experience for these readers; it is simply absent.</p>
+<p>Hard, current numbers on how much regional-language content carries this exact defect are thin, and we will not invent them. What is well established is that legacy non-Unicode fonts were the dominant publishing method for Indian languages for two decades and remain in wide use, and that documents produced this way are not recoverable by assistive technology without re-encoding.<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup> The honest summary is: the problem is large, it is concentrated in exactly the documents people most need, and it has gone largely unmeasured because no one was looking for it.</p>
+<h2 id="why-we-treat-this-as-the-foundation-not-a-footnote">Why we treat this as the foundation, not a footnote</h2>
+<p>It would be easy to file this under "fonts," a narrow technical curiosity. That framing is precisely the mistake. Accessibility is a stack: tagging, headings, alternative text, reading order, and what a screen reader speaks all sit on top of the assumption that the text underneath is real. Pull that assumption away and nothing above it can function. For most of the Global South's documents the assumption is absent, so the readiness of the text, in whatever language it is written, is the base of everything else.</p>
+<p>That is what this knowledge base is about. It gathers, in one place and in plain language, what goes wrong with documents in languages other than English, how to tell, how to fix it, and what governments and institutions can require so that it stops happening. It is written for the people who remediate these documents and for the people who set the policies that produce them. The goal is simple and large at the same time: that a document in any language can be read by the readers who depend on hearing it.</p>
+<h2 id="endnotes">Endnotes</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Saini and Lehal, "A Survey of Language-Detection, Font-Detection and Font-Conversion Systems for Indian Languages," 2015. The detection and conversion work exists chiefly as academic and tooling fragments rather than consolidated practitioner guidance. <a href="https://www.researchgate.net/publication/281381833">https://www.researchgate.net/publication/281381833</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>"Why Extracting Hindi Text from PDFs Is So Much Harder Than English." The Digital Orientalist, 2025. Legacy fonts were the standard for Indian-language publishing and remain in heavy use; their text is not recoverable without re-encoding. <a href="https://digitalorientalist.com/2025/12/02/why-extracting-hindi-text-from-pdfs-is-so-much-harder-than-english-and-how-you-can-do-it/">https://digitalorientalist.com/2025/12/02/why-extracting-hindi-text-from-pdfs-is-so-much-harder-than-english-and-how-you-can-do-it/</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Kruti Dev. Wikipedia, 2025. Legacy non-Unicode fonts paint a script's glyphs from Roman byte positions; the rendered page is correct while the stored text is not. <a href="https://en.wikipedia.org/wiki/Kruti_Dev">https://en.wikipedia.org/wiki/Kruti_Dev</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>veraPDF, PDF/UA Part 1 validation rules, 2024. The ToUnicode requirement is implemented as a presence check, not a correctness check. <a href="https://github.com/veraPDF/veraPDF-validation-profiles/wiki/PDFUA-Part-1-rules">https://github.com/veraPDF/veraPDF-validation-profiles/wiki/PDFUA-Part-1-rules</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>PDF Association, "Glossary of accessibility terminology in PDF," 2023. Correct Unicode mappings are what allow assistive technology to interpret content. <a href="https://pdfa.org/glossary-of-accessibility-terminology-in-pdf/">https://pdfa.org/glossary-of-accessibility-terminology-in-pdf/</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></main></div></div>
+<footer><div class="wrap"><strong>Lipi</strong>, the language-readiness foundation for non-English content. Part of the EquitableDocs initiative. See also the <a href="https://equitabledocs.org/guide/">Document Accessibility Guide</a>. Questions: <a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a>.</div></footer>
+</body></html>

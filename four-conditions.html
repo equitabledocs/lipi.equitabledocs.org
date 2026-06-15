@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The four conditions | Lipi</title>
+<style>
+:root{--ink:#0b0c0c;--mute:#4b5563;--bg:#ffffff;--alt:#f3f4f6;--accent:#1e40af;
+--accent-hover:#172554;--border:#d1d5db;--rule:#e5e7eb;--focus-bg:#fde68a;--focus-ink:#78350f}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;color:var(--ink);background:var(--bg);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+line-height:1.6}
+a{color:var(--accent)}a:hover{color:var(--accent-hover)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus-ink);outline-offset:2px;
+background:var(--focus-bg);color:var(--focus-ink)}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--focus-bg);
+color:var(--focus-ink);padding:8px;z-index:10}
+header.site{background:#1f2937;color:#fff;padding:14px 0}
+header.site a{color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem}
+header.site .site-byline{color:#e5e7eb;font-size:0.9rem;margin-left:12px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+nav.toc-side{position:sticky;top:16px;font-size:0.9rem}
+nav.toc-side .nav-label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;
+color:var(--mute);margin:18px 0 6px;font-weight:700}
+nav.toc-side ul{list-style:none;margin:0;padding:0}
+nav.toc-side li{margin:5px 0}
+nav.toc-side a{text-decoration:none}
+nav.toc-side a.here{font-weight:700;color:var(--ink)}
+main{min-width:0;max-width:46rem}
+main h1{font-size:2.1rem;line-height:1.2;margin:0 0 4px}
+.byline{color:var(--mute);font-size:1.2rem;font-weight:400;margin:0 0 22px}
+main h2{font-size:1.5rem;margin:34px 0 4px;padding-top:14px;border-top:2px solid var(--ink)}
+main h3{font-size:1.15rem;margin:24px 0 4px}
+main p,main li{font-size:1rem}
+main ul,main ol{padding-left:1.3rem}
+main code{background:var(--alt);padding:1px 5px;border-radius:4px;font-size:0.92em}
+main table{border-collapse:collapse;width:100%;margin:14px 0;font-size:0.92rem}
+main th,main td{border:1px solid var(--border);padding:7px 10px;text-align:left;vertical-align:top}
+main th{background:var(--alt)}
+.lede{color:var(--mute);font-size:1.1rem}
+.page-toc{background:var(--alt);border:1px solid var(--border);border-radius:6px;
+padding:12px 16px;margin:16px 0 26px;font-size:0.9rem}
+.page-toc .lab{font-weight:700;font-size:0.78rem;text-transform:uppercase;
+letter-spacing:0.06em;color:var(--mute)}
+.page-toc ul{margin:6px 0 0}
+.footnote{font-size:0.9rem;color:var(--mute)}
+.footnote p{font-size:0.9rem}
+footer{border-top:1px solid var(--rule);margin-top:48px;padding:22px 0;
+color:var(--mute);font-size:0.9rem}
+footer a{color:var(--accent)}
+@media (max-width:820px){.layout{grid-template-columns:1fr}
+nav.toc-side{position:static;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:10px}}
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><a href="index.html">Lipi</a><span class="site-byline">the language-readiness foundation for non-English content</span></div></header>
+<div class="wrap"><div class="layout"><nav class="toc-side" aria-label="Lipi pages"><p class="nav-label">Start here</p><ul><li><a href="index.html">Home</a></li><li><a href="the-gap.html">The gap</a></li><li><a href="legacy-fonts.html">Legacy fonts</a></li><li><a class="here" href="four-conditions.html">The four conditions</a></li><li><a href="remediating.html">Remediating a book</a></li></ul></nav><main id="main"><h1 id="the-four-conditions-what-makes-a-non-english-document-readable">The four conditions: what makes a non-English document readable</h1><div class="page-toc"><span class="lab">On this page</span><div class="toc">
+<ul>
+<li><a href="#the-four-conditions-what-makes-a-non-english-document-readable">The four conditions: what makes a non-English document readable</a><ul>
+<li><a href="#1-the-text-is-real-unicode">1. The text is real Unicode</a></li>
+<li><a href="#2-the-reading-order-is-logical">2. The reading order is logical</a></li>
+<li><a href="#3-the-language-is-declared">3. The language is declared</a></li>
+<li><a href="#4-the-font-is-unicode-compliant-for-the-script">4. The font is Unicode-compliant for the script</a></li>
+<li><a href="#why-all-four-and-in-this-order">Why all four, and in this order</a></li>
+<li><a href="#endnotes">Endnotes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>It is tempting to think of accessibility for a regional-language document as one thing to get right. It is four, and they are independent. A document is genuinely readable by a screen reader only when all four hold together. Getting three of them perfect and missing the fourth still leaves the reader with nothing, or with the wrong thing. This entry sets out the four plainly, because they are the checklist behind everything else in this knowledge base.</p>
+<h2 id="1-the-text-is-real-unicode">1. The text is real Unicode</h2>
+<p>The first condition is that the characters stored in the file are the actual characters of the language, in the universal encoding called Unicode, and not a legacy substitute.</p>
+<p>A legacy font stores the script as Roman bytes and only paints the local shapes, so the text underneath is gibberish to any software that reads it.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> If this condition fails, nothing else matters: there is no real text for tagging, language tagging, or a screen reader to work with. This is the foundation, covered in detail in the entry on legacy fonts.</p>
+<p>How it fails: legacy non-Unicode fonts (Kruti Dev, DevLys, TSCII, Bijoy, InPage, and their kind); a missing or incorrect character map (<code>ToUnicode</code>) in an otherwise modern font; or a scanned page with no text layer at all.</p>
+<p>How to check: copy a line of the text and paste it into a plain text box. If it comes back in the right script, this condition is met. If it comes back as Roman gibberish, the font is legacy. If nothing pastes, the page is a scan.<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h2 id="2-the-reading-order-is-logical">2. The reading order is logical</h2>
+<p>The second condition is that the text is stored in the order it is meant to be read and spoken, not the order it happens to be drawn on the page.</p>
+<p>This matters more for complex scripts than for English. In Devanagari, Tamil, Bengali, and others, the visual position of a glyph is often not its logical position: the short-i vowel sign is drawn before the consonant it actually follows, and consonant clusters are reshaped and reordered for display.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> If a document stores text in the order the glyphs were painted, every codepoint can be correct Unicode and the reading order still be wrong, so a screen reader speaks the syllables out of sequence and search cannot find ordinary words.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p>How it fails: a generator that builds the text layer from the visual glyph order; reordered vowel signs and conjuncts left in display order; right-to-left text (Arabic, Urdu) stored reversed.</p>
+<p>How to check: this is harder to confirm by eye. A practical signal is search: if you have to type a word in an unnatural order to find it, the stored order is visual, not logical. At scale it is detected by comparing the stored character order against the script's syllable rules.<sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<h2 id="3-the-language-is-declared">3. The language is declared</h2>
+<p>The third condition is that the document says what language it is in, both overall and for any passage that switches language.</p>
+<p>A screen reader chooses its pronunciation rules and its voice from the document's declared language (the <code>/Lang</code> value). If no language is declared, the screen reader falls back to its default, usually English, and reads the text with English pronunciation, which turns correct Hindi or Tamil into noise.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> If the wrong language is declared, it reads with the wrong rules, equally unintelligible. And a document that mixes an English administrative wrapper with a regional-language body, very common in the Global South, needs each part tagged with its own language, or the screen reader mispronounces one of them throughout.<sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
+<p>How it fails: no document-level <code>/Lang</code>; no per-passage language on mixed-language content; a <code>/Lang</code> value that is wrong or not a valid language tag.</p>
+<p>How to check: inspect the document's language setting and confirm it matches the actual language; for mixed documents, confirm each passage carries its own. Note a residual limit the reader should know: even a correct language tag only helps if the reader has a voice for that language installed.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<h2 id="4-the-font-is-unicode-compliant-for-the-script">4. The font is Unicode-compliant for the script</h2>
+<p>The fourth condition is that the font actually used can render the script's characters correctly, including its conjuncts and combining marks, and is itself a proper Unicode font.</p>
+<p>This is the one most people reach for first, and on its own it fixes nothing. A Unicode-compliant font wrapped around legacy Roman bytes still produces gibberish underneath; the font is necessary but not sufficient.<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup> Where it does matter independently is coverage: a font that claims a script but lacks specific conjuncts or rarer characters renders empty boxes (called tofu) or wrong shapes, and the reader, sighted or not, loses the content.<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></p>
+<p>How it fails: a legacy font (fails condition 1 as well); a Unicode font with incomplete coverage of the script's conjuncts; the wrong font for the script.</p>
+<p>How to fix: use a Unicode-compliant font designed for the script, the Noto Sans family is the safe cross-platform default (Noto Sans Devanagari, Tamil, Bengali, and so on), with Lohit and the Windows fonts Mangal and Nirmala UI as alternatives.<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup><sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></p>
+<h2 id="why-all-four-and-in-this-order">Why all four, and in this order</h2>
+<p>The four are a dependency chain in spirit. Real Unicode text (1) is the ground; without it the rest is moot. Logical order (2) and a declared language (3) determine whether the real text is spoken correctly. A compliant font (4) makes it visible and complete. The common and costly mistake is to treat condition 4 as the whole problem, swap in a Unicode font, and ship a document whose bytes are still legacy and still unreadable. The discipline this knowledge base asks for is to check all four, every time, starting from the foundation.</p>
+<h2 id="endnotes">Endnotes</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Kruti Dev (Wikipedia, 2025) and PubCom, "Fonts, Unicode, OpenType, and Accessibility" (2013). Legacy fonts store Roman bytes; a Unicode font alone does not recover legacy text. <a href="https://en.wikipedia.org/wiki/Kruti_Dev">https://en.wikipedia.org/wiki/Kruti_Dev</a> ; <a href="https://www.pubcom.com/blog/2013_12-03/unicode-accessibility.html">https://www.pubcom.com/blog/2013_12-03/unicode-accessibility.html</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Richard Ishida / W3C, "An Introduction to Indic Scripts," 2003. Glyph reordering and conjunct formation; visual order differs from logical order. <a href="https://www.w3.org/2002/Talks/09-ri-indic/indic-paper.html">https://www.w3.org/2002/Talks/09-ri-indic/indic-paper.html</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Unicode 16.0 Core Specification, Chapter 12 (South and Central Asia). The virama model and the reordering of dependent vowel signs. 2024. <a href="https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/">https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-12/</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>"Searchable PDF with Devanagari texts." Icebearsoft, 2017. The short-i vowel sign precedes its consonant in display order, so search requires the visual order; conjunct composition creates spurious word boundaries. <a href="http://icebearsoft.euweb.cz/dvngpdf/">http://icebearsoft.euweb.cz/dvngpdf/</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>W3C WAI, Technique PDF16 "Setting the default language using the /Lang entry," and PDF19 for passages. 2016 to 2023. <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF16">https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF16</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>WebAIM, "Document and Content Language," 2024. Text read with the wrong language's pronunciation rules becomes unintelligible; mixed-language content needs per-passage tagging. <a href="https://webaim.org/techniques/language/">https://webaim.org/techniques/language/</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Adrian Roselli, "Don't Override Screen Reader Pronunciation," 2023. A correct language tag helps only if a matching voice is installed. <a href="https://adrianroselli.com/2023/04/dont-override-screen-reader-pronunciation.html">https://adrianroselli.com/2023/04/dont-override-screen-reader-pronunciation.html</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>SymbolFYI, "Tofu: Why Characters Show as Empty Rectangles," 2024. Missing glyph coverage produces empty boxes when no font in the fallback chain covers the character. <a href="https://symbolfyi.com/guides/tofu-missing-glyphs/">https://symbolfyi.com/guides/tofu-missing-glyphs/</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Pramukh IME, "List of Unicode fonts for Indian languages," 2024. Per-script Unicode font recommendations. <a href="https://www.pramukhime.com/blog/indic-unicode-fonts">https://www.pramukhime.com/blog/indic-unicode-fonts</a>&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>Nirmala UI (Wikipedia, 2024). A single Windows family covering most Indic scripts. <a href="https://en.wikipedia.org/wiki/Nirmala_UI">https://en.wikipedia.org/wiki/Nirmala_UI</a>&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></main></div></div>
+<footer><div class="wrap"><strong>Lipi</strong>, the language-readiness foundation for non-English content. Part of the EquitableDocs initiative. See also the <a href="https://equitabledocs.org/guide/">Document Accessibility Guide</a>. Questions: <a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a>.</div></footer>
+</body></html>

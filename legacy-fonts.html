@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When the text is not really text | Lipi</title>
+<style>
+:root{--ink:#0b0c0c;--mute:#4b5563;--bg:#ffffff;--alt:#f3f4f6;--accent:#1e40af;
+--accent-hover:#172554;--border:#d1d5db;--rule:#e5e7eb;--focus-bg:#fde68a;--focus-ink:#78350f}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;color:var(--ink);background:var(--bg);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+line-height:1.6}
+a{color:var(--accent)}a:hover{color:var(--accent-hover)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus-ink);outline-offset:2px;
+background:var(--focus-bg);color:var(--focus-ink)}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--focus-bg);
+color:var(--focus-ink);padding:8px;z-index:10}
+header.site{background:#1f2937;color:#fff;padding:14px 0}
+header.site a{color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem}
+header.site .site-byline{color:#e5e7eb;font-size:0.9rem;margin-left:12px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+nav.toc-side{position:sticky;top:16px;font-size:0.9rem}
+nav.toc-side .nav-label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;
+color:var(--mute);margin:18px 0 6px;font-weight:700}
+nav.toc-side ul{list-style:none;margin:0;padding:0}
+nav.toc-side li{margin:5px 0}
+nav.toc-side a{text-decoration:none}
+nav.toc-side a.here{font-weight:700;color:var(--ink)}
+main{min-width:0;max-width:46rem}
+main h1{font-size:2.1rem;line-height:1.2;margin:0 0 4px}
+.byline{color:var(--mute);font-size:1.2rem;font-weight:400;margin:0 0 22px}
+main h2{font-size:1.5rem;margin:34px 0 4px;padding-top:14px;border-top:2px solid var(--ink)}
+main h3{font-size:1.15rem;margin:24px 0 4px}
+main p,main li{font-size:1rem}
+main ul,main ol{padding-left:1.3rem}
+main code{background:var(--alt);padding:1px 5px;border-radius:4px;font-size:0.92em}
+main table{border-collapse:collapse;width:100%;margin:14px 0;font-size:0.92rem}
+main th,main td{border:1px solid var(--border);padding:7px 10px;text-align:left;vertical-align:top}
+main th{background:var(--alt)}
+.lede{color:var(--mute);font-size:1.1rem}
+.page-toc{background:var(--alt);border:1px solid var(--border);border-radius:6px;
+padding:12px 16px;margin:16px 0 26px;font-size:0.9rem}
+.page-toc .lab{font-weight:700;font-size:0.78rem;text-transform:uppercase;
+letter-spacing:0.06em;color:var(--mute)}
+.page-toc ul{margin:6px 0 0}
+.footnote{font-size:0.9rem;color:var(--mute)}
+.footnote p{font-size:0.9rem}
+footer{border-top:1px solid var(--rule);margin-top:48px;padding:22px 0;
+color:var(--mute);font-size:0.9rem}
+footer a{color:var(--accent)}
+@media (max-width:820px){.layout{grid-template-columns:1fr}
+nav.toc-side{position:static;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:10px}}
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><a href="index.html">Lipi</a><span class="site-byline">the language-readiness foundation for non-English content</span></div></header>
+<div class="wrap"><div class="layout"><nav class="toc-side" aria-label="Lipi pages"><p class="nav-label">Start here</p><ul><li><a href="index.html">Home</a></li><li><a href="the-gap.html">The gap</a></li><li><a class="here" href="legacy-fonts.html">Legacy fonts</a></li><li><a href="four-conditions.html">The four conditions</a></li><li><a href="remediating.html">Remediating a book</a></li></ul></nav><main id="main"><h1 id="when-the-text-is-not-really-text-legacy-fonts-in-non-english-documents">When the text is not really text: legacy fonts in non-English documents</h1><div class="page-toc"><span class="lab">On this page</span><div class="toc">
+<ul>
+<li><a href="#when-the-text-is-not-really-text-legacy-fonts-in-non-english-documents">When the text is not really text: legacy fonts in non-English documents</a><ul>
+<li><a href="#what-a-legacy-font-actually-is">What a legacy font actually is</a></li>
+<li><a href="#why-no-one-notices">Why no one notices</a></li>
+<li><a href="#why-the-accessibility-standards-do-not-catch-it">Why the accessibility standards do not catch it</a></li>
+<li><a href="#how-widespread-this-is">How widespread this is</a></li>
+<li><a href="#how-to-tell-whether-a-document-has-this-problem">How to tell whether a document has this problem</a></li>
+<li><a href="#the-legacy-font-families-by-script">The legacy font families, by script</a></li>
+<li><a href="#how-to-fix-it">How to fix it</a></li>
+<li><a href="#language-ready-means-four-things-not-one">"Language ready" means four things, not one</a></li>
+<li><a href="#why-this-is-the-foundation">Why this is the foundation</a></li>
+<li><a href="#endnotes">Endnotes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>A student who is blind opens her Hindi textbook with a screen reader. The page is full of Devanagari, neatly typeset, exactly as her classmates see it. Her screen reader reads out a stream of unrelated English letters, or says nothing at all. The teacher who prepared that file looks at the same page and sees perfect Hindi. Both of them are right about what they see. The distance between those two truths is the subject of this entry, and it is the reason a large share of the Global South's documents never become accessible, no matter how much care goes into the rest of the work.</p>
+<h2 id="what-a-legacy-font-actually-is">What a legacy font actually is</h2>
+<p>A PDF does not store letters. It stores instructions to paint shapes, called glyphs, and a separate table that says which character each glyph stands for. For English this table is almost always correct, so the text you see and the text a computer can read are the same.</p>
+<p>A legacy font breaks that link on purpose. Before Unicode was widely supported, and to let people type Indian scripts on ordinary English keyboards, font makers redrew the letters. In a legacy Devanagari font, the key that types the Latin letter <code>d</code> paints the shape क; the key for <code>M</code> paints म; punctuation keys paint vowel signs. The bytes saved in the file are Roman letters. Only the picture on the screen is Hindi.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>So when software tries to read the text back, a screen reader, a search box, a copy-paste, a translation tool, it reads the bytes, which are Roman. The Hindi word <span lang="hi">भूमिका</span> ("introduction") is stored as <code>Hkwfedk</code> and read aloud as those letters. The page looks like a language; the text underneath is not that language at all.<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<h2 id="why-no-one-notices">Why no one notices</h2>
+<p>The picture is always correct, because the viewer paints glyphs by their position and never consults the character table. So the document looks finished to everyone who can see it: the author, the proofreader, the official who signs it off. Nothing on screen signals that anything is wrong. The failure only appears the moment someone tries to <em>read</em> the text rather than <em>look</em> at it, and the people who do that, screen reader users and search engines, are exactly the people who were not in the room when the file was made.<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p>This is what makes it so quietly damaging. It is not a visible defect that gets caught and fixed. It is an invisible one that ships, again and again, in textbooks and exam papers and government circulars, and is discovered only by the reader it shuts out.</p>
+<h2 id="why-the-accessibility-standards-do-not-catch-it">Why the accessibility standards do not catch it</h2>
+<p>It would be reasonable to assume the accessibility checkers would flag this. They do not. The PDF/UA standard requires only that a font carry a character map (a <code>ToUnicode</code> table); it does not require that the map point to the <em>right</em> characters. The reference validator, veraPDF, implements that rule literally as "a character map is present," and the only values it rejects are a few technically illegal ones.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> A legacy font carries a perfectly well-formed map that happens to say its glyphs are Roman letters. It passes. So a document can earn a clean accessibility report and still be unreadable in its own language.<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
+<p>This is the heart of why non-English content is missing from the accessibility conversation. The tools were built where the foundation was already sound, so they check the floors above it and never the floor itself.</p>
+<h2 id="how-widespread-this-is">How widespread this is</h2>
+<p>This is not a rare edge case. Legacy fonts such as Kruti Dev, DevLys, Shree, Chanakya and their equivalents were the standard way to publish Indian-language material through the 1990s and 2000s, and they remain in heavy use in government and educational publishing today.<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup><sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup> The example that prompted this work was a current National Council of Educational Research and Training (NCERT) Hindi textbook: 124,418 characters of text, not one of them in the Devanagari range. A 10th-standard Kannada mathematics textbook was the same. Two Tamil Nadu state textbooks, by contrast, were clean Unicode. The problem is large, it is uneven, and it sits squarely on the documents students are handed.</p>
+<h2 id="how-to-tell-whether-a-document-has-this-problem">How to tell whether a document has this problem</h2>
+<p>You do not need special software to check a single file. Open the PDF, select a line of the regional-language text, copy it, and paste it into a plain text box.</p>
+<ul>
+<li>If the pasted text is the same script you see on the page, the encoding is sound.</li>
+<li>If the pasted text is a string of unrelated Roman letters and symbols (something like <code>Hkwfedk ge lHkh</code>), the document uses a legacy font and its text is not real.</li>
+<li>If nothing pastes at all, or you cannot select text, the page is probably a scan, which is a different problem with a different fix (it needs optical character recognition, not re-encoding).</li>
+</ul>
+<p>At scale, the same judgment can be made automatically: extract the text and measure how much of it falls in the script the document is supposed to be in. Real Hindi is mostly Devanagari characters; legacy Hindi is almost entirely Latin. The gap between the two is wide and unambiguous.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<h2 id="the-legacy-font-families-by-script">The legacy font families, by script</h2>
+<p>If you maintain or audit documents, these are the font names that signal legacy, non-Unicode encoding. The list is not exhaustive, and several vendor families (Akruti, Shree-Lipi, ISM, GIST) span many scripts.<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup><sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></p>
+<ul>
+<li>Devanagari (Hindi, Marathi, Sanskrit): Kruti Dev, DevLys, Shree-Dev, Chanakya, Walkman-Chanakya, Shusha, Shivaji, APS, Yogesh.</li>
+<li>Tamil: TSCII fonts, Bamini, TAB, TAM, ELCOT, Shree-Tam, Amudham, Vanavil.</li>
+<li>Telugu: Anu, Hemalatha, Eenadu, Shree-Tel.</li>
+<li>Kannada: Nudi (legacy), Baraha (ASCII mode), Shree-Kan, BRH.</li>
+<li>Malayalam: ML-TT family (ML-TTKarthika, ML-TTRevathi), Manorama (MM), Shree-Mal.</li>
+<li>Bengali and Assamese: Bijoy with SutonnyMJ, Shree-Ban, Boishakhi.</li>
+<li>Gujarati: LMG, Shree-Guj, Saral, Terafont.</li>
+<li>Gurmukhi (Punjabi): AnmolLipi, Asees, Joy, Satluj, GurbaniLipi.</li>
+<li>Odia: Akruti Sarala, Sarala, Shree-Lipi, Kalinga.</li>
+<li>Urdu (and Sindhi, Pashto): InPage encoding with Noori Nastaliq and Jameel Noori Nastaleeq.</li>
+</ul>
+<h2 id="how-to-fix-it">How to fix it</h2>
+<p>A legacy-font document cannot be repaired by tagging it, adding alternative text, or running an accessibility checker over it. None of that touches the underlying bytes. The text itself has to be re-made in Unicode. There are three honest paths, in order of preference.</p>
+<ol>
+<li><strong>Convert the legacy text to Unicode.</strong> If the document has real, editable text (not a scan), the right fix is to run it through a legacy-to-Unicode converter for its exact font, then set it in a Unicode font. Mature open-source converters exist for most scripts: GUCA for Gurmukhi, ascii2unicode for Kannada, the OdiaWikimedia converter for Odia, Android-TamilUtil for Tamil, and many tools for Devanagari.<sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">8</a></sup><sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup> The caveats matter and must be checked: the converter has to know the exact font variant; it has to handle conjuncts and the reordering of vowel signs correctly; embedded English can be distorted by careless tools; and the output must always be proofread, because conversion is not guaranteed to be perfect.<sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">9</a></sup></li>
+<li><strong>Re-typeset in Unicode.</strong> If the original source file is available, re-keying or re-flowing the content in a Unicode font from the start is the only path that guarantees correct encoding, reading order, and language tagging together. It costs the most effort and is worth it for documents that recur, such as templates and series textbooks.</li>
+<li><strong>Optical character recognition, as a fallback.</strong> If the document is a scan, or the legacy encoding cannot be reliably converted, OCR rebuilds a genuine Unicode text layer from the picture. Tesseract with the relevant Indic models handles many scripts; the output is character-accurate at best and must be proofread, and it should be produced as an image-over-text PDF so the original page is preserved.<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></li>
+</ol>
+<p>Whichever path is used, set the document's language correctly (the <code>/Lang</code> value, for the document and for any passage in a different language) so a screen reader applies the right pronunciation, and choose a Unicode-compliant font for the script: the Noto Sans family is the safe cross-platform default (Noto Sans Devanagari, Tamil, Bengali, Kannada, Telugu, Malayalam, Gujarati, Gurmukhi, Oriya), Lohit is the open-source choice, and Mangal and Nirmala UI are the common Windows fonts.<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup><sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup></p>
+<h2 id="language-ready-means-four-things-not-one">"Language ready" means four things, not one</h2>
+<p>Choosing a Unicode font does not by itself fix a legacy document; a Unicode font wrapped around legacy Roman bytes is still gibberish underneath. A document in a non-English language is only truly readable to assistive technology when all four of these hold together:</p>
+<ol>
+<li>The text is correct Unicode (no legacy mapping; the character table points to the real characters).</li>
+<li>The reading order is logical, so the text is stored in the order it is spoken, not the order it happens to be drawn.</li>
+<li>The language is declared, for the document and for each passage that switches language.</li>
+<li>The font is Unicode-compliant for the script.</li>
+</ol>
+<p>Miss any one and the document fails for its reader, even if the other three are perfect.</p>
+<h2 id="why-this-is-the-foundation">Why this is the foundation</h2>
+<p>Everything else in document accessibility, the tags, the headings, the alternative text, the reading order a screen reader follows, assumes that the text underneath is real, machine-readable text. For English that assumption holds by default, so the field treats it as settled and never mentions it. For most of the Global South's documents it does not hold. The text is not real, so there is nothing for the rest of accessibility to stand on.</p>
+<p>That is why this is not a small technical matter about fonts. It is the base of all content in languages other than English. Until it is fixed, no amount of careful remediation above it can reach the reader. Fixing it is the first thing, and for a very large number of students it is the difference between a textbook that exists for them and one that does not.</p>
+<h2 id="endnotes">Endnotes</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Kruti Dev. Wikipedia, 2025. Legacy non-Unicode Devanagari font mapping glyphs onto ASCII positions; copying or sharing text without the font produces unreadable output; search and indexing are limited. <a href="https://en.wikipedia.org/wiki/Kruti_Dev">https://en.wikipedia.org/wiki/Kruti_Dev</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>"Why Extracting Hindi Text from PDFs Is So Much Harder Than English." The Digital Orientalist, 2025. Legacy fonts (Kruti Dev, Shivaji, Chanakya) store text as Roman bytes; copying yields gibberish; encodings are ad hoc and per-publisher. <a href="https://digitalorientalist.com/2025/12/02/why-extracting-hindi-text-from-pdfs-is-so-much-harder-than-english-and-how-you-can-do-it/">https://digitalorientalist.com/2025/12/02/why-extracting-hindi-text-from-pdfs-is-so-much-harder-than-english-and-how-you-can-do-it/</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>PubCom, "Fonts, Unicode, OpenType, and Accessibility," 2013. A glyph a human reads as one character is read by software as a different character when the encoding does not match. <a href="https://www.pubcom.com/blog/2013_12-03/unicode-accessibility.html">https://www.pubcom.com/blog/2013_12-03/unicode-accessibility.html</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>PDF Association, "Glossary of accessibility terminology in PDF," 2023. Correct Unicode mappings are what allow assistive technology to interpret content; without them the content is not machine-readable. <a href="https://pdfa.org/glossary-of-accessibility-terminology-in-pdf/">https://pdfa.org/glossary-of-accessibility-terminology-in-pdf/</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>veraPDF, PDF/UA Part 1 validation rules, 2024. The ToUnicode requirement (clause 7.21.7-1) is implemented as a presence check; only the values U+0000, U+FEFF and U+FFFE are rejected. <a href="https://github.com/veraPDF/veraPDF-validation-profiles/wiki/PDFUA-Part-1-rules">https://github.com/veraPDF/veraPDF-validation-profiles/wiki/PDFUA-Part-1-rules</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>PDFix, "PDF accessibility validators compared," 2025. Font and encoding checks are implemented inconsistently across veraPDF, PAC, Adobe and CommonLook, with over half of test files producing conflicting results. <a href="https://pdfix.net/pdf-accessibility-validators/">https://pdfix.net/pdf-accessibility-validators/</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Saini and Lehal, "Automatic Bilingual Legacy-Fonts Identification and Conversion System," Research in Computing Science vol. 86, 2014. Legacy Indic encodings are detected statistically from the distribution of characters in extracted text, reaching high accuracy across many encodings. <a href="https://www.rcs.cic.ipn.mx/2014_86/Automatic%20Bilingual%20Legacy-Fonts%20Identification%20and%20Conversion%20System.pdf">https://www.rcs.cic.ipn.mx/2014_86/Automatic%20Bilingual%20Legacy-Fonts%20Identification%20and%20Conversion%20System.pdf</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Centre for Internet and Society (India), "Converting from non-Unicode (Nudi, Baraha) font encoding to Unicode Kannada," 2014. Legacy text stored as glyph codes makes search, sort and text-to-speech impossible; conversion requires handling dependent-vowel reordering. <a href="https://cis-india.org/openness/blog-old/converting-from-non-unicode-nudi-baraha-font-encoding-to-unicode-kannada">https://cis-india.org/openness/blog-old/converting-from-non-unicode-nudi-baraha-font-encoding-to-unicode-kannada</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Hindi font converter guidance on conversion accuracy, 2024 to 2025. Reliable conversion requires more than 180 character mappings (conjuncts, vowel signs, anusvara, visarga, halant, numerals), confirmation of the exact font variant, and preservation of embedded English; output requires proofreading. <a href="https://hindifontconverter.com/">https://hindifontconverter.com/</a>&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>University of Illinois Library, "OCR Best Practices," 2024. Quoted accuracy figures are character-level, not word-level; small or low-contrast fonts reduce accuracy; image-over-text PDFs preserve the page image with a searchable text layer. <a href="https://guides.library.illinois.edu/OCR/bestpractices">https://guides.library.illinois.edu/OCR/bestpractices</a>&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>Pramukh IME, "List of Unicode fonts for Indian languages," 2024. Per-script Unicode font recommendations (Noto, Lohit, Microsoft defaults). <a href="https://www.pramukhime.com/blog/indic-unicode-fonts">https://www.pramukhime.com/blog/indic-unicode-fonts</a>&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>Nirmala UI. Wikipedia, 2024. A single Windows font family covering most Indic scripts, designed for user-interface readability. <a href="https://en.wikipedia.org/wiki/Nirmala_UI">https://en.wikipedia.org/wiki/Nirmala_UI</a>&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></main></div></div>
+<footer><div class="wrap"><strong>Lipi</strong>, the language-readiness foundation for non-English content. Part of the EquitableDocs initiative. See also the <a href="https://equitabledocs.org/guide/">Document Accessibility Guide</a>. Questions: <a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a>.</div></footer>
+</body></html>

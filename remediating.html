@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remediating a regional-language book | Lipi</title>
+<style>
+:root{--ink:#0b0c0c;--mute:#4b5563;--bg:#ffffff;--alt:#f3f4f6;--accent:#1e40af;
+--accent-hover:#172554;--border:#d1d5db;--rule:#e5e7eb;--focus-bg:#fde68a;--focus-ink:#78350f}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;color:var(--ink);background:var(--bg);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+line-height:1.6}
+a{color:var(--accent)}a:hover{color:var(--accent-hover)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus-ink);outline-offset:2px;
+background:var(--focus-bg);color:var(--focus-ink)}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--focus-bg);
+color:var(--focus-ink);padding:8px;z-index:10}
+header.site{background:#1f2937;color:#fff;padding:14px 0}
+header.site a{color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem}
+header.site .site-byline{color:#e5e7eb;font-size:0.9rem;margin-left:12px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+nav.toc-side{position:sticky;top:16px;font-size:0.9rem}
+nav.toc-side .nav-label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;
+color:var(--mute);margin:18px 0 6px;font-weight:700}
+nav.toc-side ul{list-style:none;margin:0;padding:0}
+nav.toc-side li{margin:5px 0}
+nav.toc-side a{text-decoration:none}
+nav.toc-side a.here{font-weight:700;color:var(--ink)}
+main{min-width:0;max-width:46rem}
+main h1{font-size:2.1rem;line-height:1.2;margin:0 0 4px}
+.byline{color:var(--mute);font-size:1.2rem;font-weight:400;margin:0 0 22px}
+main h2{font-size:1.5rem;margin:34px 0 4px;padding-top:14px;border-top:2px solid var(--ink)}
+main h3{font-size:1.15rem;margin:24px 0 4px}
+main p,main li{font-size:1rem}
+main ul,main ol{padding-left:1.3rem}
+main code{background:var(--alt);padding:1px 5px;border-radius:4px;font-size:0.92em}
+main table{border-collapse:collapse;width:100%;margin:14px 0;font-size:0.92rem}
+main th,main td{border:1px solid var(--border);padding:7px 10px;text-align:left;vertical-align:top}
+main th{background:var(--alt)}
+.lede{color:var(--mute);font-size:1.1rem}
+.page-toc{background:var(--alt);border:1px solid var(--border);border-radius:6px;
+padding:12px 16px;margin:16px 0 26px;font-size:0.9rem}
+.page-toc .lab{font-weight:700;font-size:0.78rem;text-transform:uppercase;
+letter-spacing:0.06em;color:var(--mute)}
+.page-toc ul{margin:6px 0 0}
+.footnote{font-size:0.9rem;color:var(--mute)}
+.footnote p{font-size:0.9rem}
+footer{border-top:1px solid var(--rule);margin-top:48px;padding:22px 0;
+color:var(--mute);font-size:0.9rem}
+footer a{color:var(--accent)}
+@media (max-width:820px){.layout{grid-template-columns:1fr}
+nav.toc-side{position:static;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:10px}}
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><a href="index.html">Lipi</a><span class="site-byline">the language-readiness foundation for non-English content</span></div></header>
+<div class="wrap"><div class="layout"><nav class="toc-side" aria-label="Lipi pages"><p class="nav-label">Start here</p><ul><li><a href="index.html">Home</a></li><li><a href="the-gap.html">The gap</a></li><li><a href="legacy-fonts.html">Legacy fonts</a></li><li><a href="four-conditions.html">The four conditions</a></li><li><a class="here" href="remediating.html">Remediating a book</a></li></ul></nav><main id="main"><h1 id="remediating-a-regional-language-book-the-workflow">Remediating a regional-language book: the workflow</h1><div class="page-toc"><span class="lab">On this page</span><div class="toc">
+<ul>
+<li><a href="#remediating-a-regional-language-book-the-workflow">Remediating a regional-language book: the workflow</a><ul>
+<li><a href="#step-0-find-out-what-kind-of-problem-you-have">Step 0: find out what kind of problem you have</a></li>
+<li><a href="#step-1-legacy-text-convert-it-to-unicode">Step 1: legacy text, convert it to Unicode</a></li>
+<li><a href="#step-2-scanned-pages-rebuild-the-text-with-ocr">Step 2: scanned pages, rebuild the text with OCR</a></li>
+<li><a href="#step-3-structure-the-document-tagging-and-reading-order">Step 3: structure the document (tagging and reading order)</a></li>
+<li><a href="#step-4-declare-the-language-and-choose-the-right-font">Step 4: declare the language and choose the right font</a></li>
+<li><a href="#step-5-verify">Step 5: verify</a></li>
+<li><a href="#the-order-matters-most">The order matters most</a></li>
+<li><a href="#endnotes">Endnotes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>This entry is the practical sequence for taking a document in a non-English language and making it readable by assistive technology. It assumes you have read the four conditions; the work here is to satisfy all four, in an order that does not waste effort. The single most important idea is the order itself: fix the foundation (real text) first, because every later step depends on it, and doing the later steps first means doing them twice.</p>
+<h2 id="step-0-find-out-what-kind-of-problem-you-have">Step 0: find out what kind of problem you have</h2>
+<p>Before any fixing, triage. The remedy is completely different depending on which of three states the document is in, and they are easy to tell apart.</p>
+<ul>
+<li>Copy a line of the regional-language text and paste it into a plain text box.</li>
+<li><strong>It pastes in the correct script</strong> , the text is real Unicode. Skip to Step 3 (this is an ordinary tagging job).</li>
+<li><strong>It pastes as Roman gibberish</strong> , the document uses a legacy font. Go to Step 1.</li>
+<li><strong>Nothing pastes, or you cannot select text</strong> , the page is a scan with no text layer. Go to Step 2.</li>
+</ul>
+<p>Do this triage per document, and on mixed documents per section, because a single file can combine real text, legacy text, and scanned pages.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h2 id="step-1-legacy-text-convert-it-to-unicode">Step 1: legacy text, convert it to Unicode</h2>
+<p>If the text is editable but legacy-encoded, the fix is to convert it to Unicode, then re-make the document.</p>
+<ol>
+<li><strong>Identify the exact legacy font</strong> from the file (its name, or by which converter's output comes out correct). The conversion depends on the precise variant, Kruti Dev 010 is not the same mapping as another Kruti Dev variant or as Shree-Dev.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li><strong>Run the text through a converter for that font.</strong> Mature, mostly open-source converters exist per script: GUCA for Gurmukhi, ascii2unicode for Kannada, the OdiaWikimedia converter for Odia, Android-TamilUtil for Tamil, and several tools for Devanagari.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> Devanagari has the strongest ecosystem; coverage for other scripts is thinner and needs more care.</li>
+<li><strong>Check the hard parts.</strong> Good conversion has to handle conjuncts and the reordering of vowel signs, and must not mangle English text embedded in the regional-language content. Weaker tools drop or misplace conjuncts, matras, and the nukta.<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
+<li><strong>Proofread.</strong> Legacy conversion is not guaranteed perfect; treat any "100 percent accurate" claim with caution and have a reader of the language check the output before it is called done.<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li><strong>Re-make the document</strong> with the converted Unicode text in a Unicode-compliant font (Step 4 below), then tag it (Step 3).</li>
+</ol>
+<p>If the original source file (in a word processor or layout tool) still exists, re-typesetting it in Unicode from that source is more reliable than converting the PDF, and it is the right choice for documents that recur, such as templates and textbook series.</p>
+<h2 id="step-2-scanned-pages-rebuild-the-text-with-ocr">Step 2: scanned pages, rebuild the text with OCR</h2>
+<p>If the page is a scanned image with no text layer, conversion has nothing to work on. Use optical character recognition to create a genuine Unicode text layer from the picture.</p>
+<ul>
+<li>Use an OCR engine with a model for the script: Tesseract with the relevant Indic language data handles many scripts, and PaddleOCR handles complex layouts.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></li>
+<li>Produce an "image-over-text" PDF, the original page image kept on top, a searchable Unicode text layer underneath, so the document looks unchanged while becoming readable.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></li>
+<li>Proofread. OCR accuracy figures are character-level, not word-level, and they fall on small type, low contrast, and dense conjunct scripts, so the output needs checking, especially for the scripts that are hardest to recognise.<sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup></li>
+</ul>
+<p>OCR is a recovery method, not a first choice. If the text is editable legacy text, Step 1 is faster and more accurate than re-recognising a picture of it.</p>
+<h2 id="step-3-structure-the-document-tagging-and-reading-order">Step 3: structure the document (tagging and reading order)</h2>
+<p>Once the text is real Unicode (whether it always was, or you produced it in Step 1 or 2), the document needs the ordinary accessibility structure that the general Document Accessibility Guide covers: a tag tree, headings, lists, tables, alternative text for images, and a correct logical reading order.</p>
+<p>For regional-language documents pay particular attention to reading order. Complex scripts can leave text in visual rather than logical order, so confirm that the tagged reading order matches how the text is spoken, not how the glyphs were drawn.<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> This is the second of the four conditions, and it is the one most easily missed after the encoding is fixed.</p>
+<h2 id="step-4-declare-the-language-and-choose-the-right-font">Step 4: declare the language and choose the right font</h2>
+<p>Two finishing steps that are cheap and mandatory.</p>
+<ul>
+<li><strong>Declare the language.</strong> Set the document's default language, and set a per-passage language wherever the document switches (for example an English heading over a Hindi body). Without this a screen reader reads everything with its default pronunciation, usually English, and correct text becomes noise.<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></li>
+<li><strong>Use a Unicode-compliant font for the script.</strong> The Noto Sans family is the safe cross-platform default (Noto Sans Devanagari, Tamil, Bengali, Kannada, Telugu, Malayalam, Gujarati, Gurmukhi, Oriya); Lohit is the open-source option; Mangal and Nirmala UI are common on Windows.<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup><sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup> Remember that the font alone never fixes legacy text; it only matters once Step 1 has made the text real.</li>
+</ul>
+<h2 id="step-5-verify">Step 5: verify</h2>
+<p>Re-run the four conditions on the finished document, and where possible do a short screen-reader spot check in the document's language. The verification is not "does it look right", which it always did, but "does it read right": paste-test the text again, confirm the language is declared, and listen to a passage if a voice for the language is available. A document that passes all four conditions and reads correctly aloud is done; one that passes a visual check is not.</p>
+<h2 id="the-order-matters-most">The order matters most</h2>
+<p>If you take one thing from this entry, take the order. Real text first, then structure, then language and font, then verify by reading rather than by looking. Reverse it, tag and style a legacy document before fixing its encoding, and you will have built a careful, compliant-looking structure on top of text that no reader can hear, and you will have to do it all again. The foundation comes first because everything else stands on it.</p>
+<h2 id="endnotes">Endnotes</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>"Why Extracting Hindi Text from PDFs Is So Much Harder Than English." The Digital Orientalist, 2025. Documents can mix real, legacy, and scanned content; per-publisher legacy encodings. <a href="https://digitalorientalist.com/2025/12/02/why-extracting-hindi-text-from-pdfs-is-so-much-harder-than-english-and-how-you-can-do-it/">https://digitalorientalist.com/2025/12/02/why-extracting-hindi-text-from-pdfs-is-so-much-harder-than-english-and-how-you-can-do-it/</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Hindi font converter guidance, 2024 to 2025. Conversion depends on the exact font variant; requires handling conjuncts, vowel signs, anusvara, visarga, halant, and numerals; embedded English must be preserved; output must be proofread. <a href="https://hindifontconverter.com/">https://hindifontconverter.com/</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>GUCA (Gurmukhi Unicode Conversion Application), ascii2unicode (Kannada), and the OdiaWikimedia Converter. 2014 to 2024. <a href="https://guca.sourceforge.net/applications/guca/">https://guca.sourceforge.net/applications/guca/</a> ; <a href="https://github.com/aravindavk/ascii2unicode">https://github.com/aravindavk/ascii2unicode</a> ; <a href="https://github.com/OdiaWikimedia/Converter">https://github.com/OdiaWikimedia/Converter</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Android-TamilUtil (Unicode and Bamini, Anjal, TAB, TAM, TSCII). 2024. <a href="https://github.com/mayooresan/Android-TamilUtil">https://github.com/mayooresan/Android-TamilUtil</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Centre for Internet and Society (India), "Converting from non-Unicode (Nudi, Baraha) font encoding to Unicode Kannada," 2014. Conversion must handle dependent-vowel reordering. <a href="https://cis-india.org/openness/blog-old/converting-from-non-unicode-nudi-baraha-font-encoding-to-unicode-kannada">https://cis-india.org/openness/blog-old/converting-from-non-unicode-nudi-baraha-font-encoding-to-unicode-kannada</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Tesseract OCR project, with Indic script models; PaddleOCR for complex layouts. 2025. <a href="https://tesseractocr.org/">https://tesseractocr.org/</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>University of Illinois Library, "OCR Best Practices," 2024. Accuracy figures are character-level; small or low-contrast type reduces accuracy; image-over-text preserves the page image with a searchable layer. <a href="https://guides.library.illinois.edu/OCR/bestpractices">https://guides.library.illinois.edu/OCR/bestpractices</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>"Searchable PDF with Devanagari texts." Icebearsoft, 2017. Complex scripts can leave text in visual rather than logical order. <a href="http://icebearsoft.euweb.cz/dvngpdf/">http://icebearsoft.euweb.cz/dvngpdf/</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>WebAIM, "Document and Content Language," 2024. Undeclared or wrong language causes the wrong pronunciation rules; mixed content needs per-passage tagging. <a href="https://webaim.org/techniques/language/">https://webaim.org/techniques/language/</a>&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>Pramukh IME, "List of Unicode fonts for Indian languages," 2024. <a href="https://www.pramukhime.com/blog/indic-unicode-fonts">https://www.pramukhime.com/blog/indic-unicode-fonts</a>&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>Nirmala UI (Wikipedia, 2024). A single Windows family covering most Indic scripts. <a href="https://en.wikipedia.org/wiki/Nirmala_UI">https://en.wikipedia.org/wiki/Nirmala_UI</a>&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></main></div></div>
+<footer><div class="wrap"><strong>Lipi</strong>, the language-readiness foundation for non-English content. Part of the EquitableDocs initiative. See also the <a href="https://equitabledocs.org/guide/">Document Accessibility Guide</a>. Questions: <a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a>.</div></footer>
+</body></html>
